@@ -39,4 +39,5 @@ RUN	apt update && \
 
 
 RUN	git clone https://github.com/mxe/mxe.git
-RUN	cd mxe && make MXE_TARGETS="i686-w64-mingw32.static" cc
+RUN	cd mxe && make MXE_TARGETS="i686-w64-mingw32.static" qt5
+ENV 	PATH PATH=/mxe/usr/bin:/mxe/usr/i686-w64-mingw32.static/qt5/bin:$PATH
